@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض نون</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 50%;
+            max-width: 1500px;
+            padding: 40px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            margin: 20px 0;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .offer-text {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .discount-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6600;
+            border: 2px dashed #ff6600;
+            padding: 10px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .copy-button {
+            font-size: 18px;
+            background-color: #28a745; /* اللون الأخضر */
+            color: #fff;
+            border: 2px solid #ff0; /* إطار أصفر */
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .copy-button:hover {
+            background-color: #218838;
+            border-color: #ffc107; /* تغيير لون الإطار عند التمرير */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="noon_logo.png" alt="Noon Logo">
+        </div>
+        <div class="offer-text">
+            عرض لفترة محدودة فقط!<br>
+            خصم 5% لو عندك حساب على نون!<br>
+           خصم 10% لو أول مرة تشتري من نون!<br>
+        </div>
+        <div class="discount-code">SQ33</div>
+        <button class="copy-button" onclick="copyCodeAndRedirect()">نسخ الكود والذهاب إلى صفحة المنتج على موقع نون</button>
+    </div>
+
+    <script>
+        function copyCodeAndRedirect() {
+            const code = 'SQ33';
+            navigator.clipboard.writeText(code).then(() => {
+                alert('تم نسخ الكود بنجاح!');
+                window.location.href = 'https://www.noon.com/egypt-ar/baby-jumpsuit-with-hood/Z1A2106FCF502E29188E9Z/p/?o=z1a2106fcf502e29188e9z-1&fbclid=IwY2xjawHzkLJleHRuA2FlbQIxMAABHbP9mHnhwIWmZzxKemEWkjbNST9JbI_tjXdpImQx6vtDkej4X4zEcF_7Mw_aem_-haz9SFYJzuE-X1LVWnoOg';
+            }, () => {
+                alert('حدث خطأ أثناء نسخ الكود.');
+            });
+        }
+    </script>
+</body>
+</html>
